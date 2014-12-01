@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Book template</title>
+
+	<style>
+
+		html {
+			font-size: 11pt;
+			word-wrap: break-word !important;
+		}
+		body {
+			margin: 12pt 12pt 12pt 12pt;
+			font-family: "Baskerville";
+  			text-rendering: geometricPrecision; /* solves the black square character bug */
+		}
+
+		.main {
+			page-break-after: always;
+		}
+
+		a {
+			color: rgba(200,200,200,0.5);
+			text-decoration: underline;
+		}
+		.linkfix {
+			color: #000;
+		}
+
+		.copy {
+			padding: 1em;
+			font-size: 14pt;
+			page-break-after: always;
+			line-height: 1.5em;
+
+		}
+		.copy::first-letter {
+			float: left;
+			font-size: 74pt;
+			line-height: 59pt;
+			padding-top: 4px;
+			padding-right: 8px;
+			padding-left: 3px;
+		}
+
+		.postAuthor {
+			font-size: 11pt;
+			padding-top: 1em;
+			text-align: right;
+		}
+		.sectionHead {
+			text-align: center;
+			font-size: 9pt;
+			font-variant: small-caps;
+			padding: 2em 0 4em 0;
+		}
+		.circle {
+			padding: 0 7pt 0 7pt;
+			font-size: 7pt;
+		}
+		.comments {
+			font-size: 10.5pt;
+		}
+		.commentName {
+			font-size: 0.8em;
+			text-align: right;
+			padding-top: 4px;
+			padding-right: 3em;
+		}
+
+		.spacer {
+			font-size: 5pt;
+			text-align: center;
+			padding: 3em;
+		}
+
+		.contributorIndex {
+			padding: 2em;
+		}
+		.contributorIndexTitle {
+			text-align: center;
+		}
+		.indexItem {
+			text-indent: -1em;
+			padding-left: 1em;
+			line-height: 1.5em;
+		}
+		.indexItemName {
+			font-weight: bold;
+			padding-right: 6px;
+		}
+
+		.closedThread {
+			text-align: center;
+			page-break-before: always;
+			padding-top: 10em;
+		}
+	</style>
+
+</head>
+<body>
+
+
+	<div class="main"></div>
+
+	<div class="contributorIndex">
+		<div class="contributorIndexTitle"><div class='sectionHead'><span class='circle'>◦</span> &nbsp; C O N T R I B U T O R &nbsp; I N D E X &nbsp; <span class='circle'>◦</span></div></div>
+	</div>
+
+</body>
+</html>

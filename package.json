@@ -1,0 +1,20 @@
+{
+  "name": "mefi2book",
+  "version": "1.0.0",
+  "main": "mefi2book.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "moment": "~2.8.3",
+    "request": "~2.48.0",
+    "wkhtmltopdf" : "~0.1.5",
+    "cheerio" : "~0.18.0",
+    "pdf-text-extract" : "~1.1.4",
+    "add-commas" : "~0.0.3",
+    "typogr" : "~0.6.4",
+    "nomnom" : "~1.8.1"
+  },
+  "author": "David Hirmes",
+  "license": "GPLv3"
+}
