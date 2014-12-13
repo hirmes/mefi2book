@@ -1,0 +1,215 @@
+<html>
+<head>
+	<title>Book template</title>
+
+	<style>
+
+		html {
+			font-size: 11pt;
+			word-wrap: break-word !important;
+		}
+		body {
+			margin: 12pt 12pt 12pt 12pt;
+			font-family: "Baskerville";
+  			text-rendering: geometricPrecision; /* solves the black square character bug */
+		}
+
+		.main {
+			page-break-after: always;
+		}
+
+		a {
+			color: rgba(200,200,200,0.5);
+			text-decoration: underline;
+		}
+		.linkfix {
+			color: #000;
+		}
+
+		.copy {
+			padding: 1em;
+			font-size: 14pt;
+			page-break-after: always;
+			line-height: 1.5em;
+
+		}
+		.copy::first-letter {
+			float: left;
+			font-size: 74pt;
+			line-height: 59pt;
+			padding-top: 4px;
+			padding-right: 8px;
+			padding-left: 3px;
+		}
+
+		.postAuthor {
+			font-size: 11pt;
+			padding-top: 1em;
+			text-align: right;
+		}
+		.sectionHead {
+			text-align: center;
+			font-size: 9pt;
+			font-variant: small-caps;
+			padding: 2em 0 4em 0;
+		}
+		.circle {
+			padding: 0 7pt 0 7pt;
+			font-size: 7pt;
+		}
+		.comments {
+			font-size: 10.5pt;
+		}
+		.commentName {
+			font-size: 0.8em;
+			text-align: right;
+			padding-top: 4px;
+			padding-right: 3em;
+		}
+
+		.spacer {
+			font-size: 5pt;
+			text-align: center;
+			padding: 3em;
+		}
+
+		.contributorIndex {
+			padding: 2em;
+		}
+		.contributorIndexTitle {
+			text-align: center;
+		}
+		.indexItem {
+			text-indent: -1em;
+			padding-left: 1em;
+			line-height: 1.5em;
+		}
+		.indexItemName {
+			font-weight: bold;
+			padding-right: 6px;
+		}
+
+		.closedThread {
+			text-align: center;
+			page-break-before: always;
+			padding-top: 10em;
+		}
+	</style>
+
+</head>
+<body>
+
+
+	<div class="main"><div class="sectionHead"><span class="circle">&#x25E6;</span> &#xA0; T H E &#xA0; P O S T &#xA0; <span class="circle">&#x25E6;</span></div><div class="copy" id="post523524">
+	 I&#x2019;ve created a script that converts a Metafilter thread into a PDF designed for printing in book form, including title page and contributor index.  I used lulu.com to print a few and they look pretty good. 
+     <div class="miseperator">
+     <br>
+	
+	<a href="https://www.youtube.com/watch?v=Lw1ZMLU04jM"><span class="linkfix">Video of what the books look like</span></a><br>
+<a href="https://www.flickr.com/photos/hirmes/sets/72157649658026692/"><span class="linkfix">Some photos</span></a><br>
+<a href="https://github.com/hirmes/mefi2book"><span class="linkfix">Source code on GitHub</span></a>
+     </div>
+     
+	<div class="postAuthor">&#x2014; posted by gwint</div></div><div class="sectionHead"><span class="circle">&#x25E6;</span> &#xA0; T H E &#xA0; C O M M E N T S &#xA0; <span class="circle">&#x25E6;</span></div><div class="comments">Oh, for those interested, PDF samples:<br>
+<br>
+<a href="http://hirmes.com/mefi2book/www_metafilter_128901.pdf"><span class="linkfix">Edward Snowden thread</span></a><br>
+<a href="http://hirmes.com/mefi2book/ask_metafilter_224805.pdf"><span class="linkfix">AskMeFi thread on How to Spot an Amateur</span></a><br>
+<a href="http://hirmes.com/mefi2book/metatalk_metafilter_20940.pdf"><span class="linkfix">Metatalk Hurricane Irene thread</span></a><br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments">This is one of the coolest things I can possibly imagine.<br><div class="commentName">&#x2014; Miko</div><div class="spacer">&#x2738;</div></div><div class="comments">Pretty keen! The formatting is pretty great, and I&#x2019;m interested in mucking around with the source code to tweak the layout options. <br>
+<br>
+{hamburger} I look forward to seeing MetaFilter get into the book publishing <s>racket</s> game, much like <a href="http://en.wikipedia.org/wiki/Wikipedia:Buying_Wikipedia_articles_in_print_or_another_form"><span class="linkfix">Wikipedia</span></a>. {/hamburger}<br><div class="commentName">&#x2014; filthy light thief</div><div class="spacer">&#x2738;</div></div><div class="comments">This is awesome.<br><div class="commentName">&#x2014; cjorgensen</div><div class="spacer">&#x2738;</div></div><div class="comments">This looks great.  But doesn&#x2019;t this run afoul of the copyright part of the <a href="http://metatalk.metafilter.com/faq.mefi#237"><span class="linkfix">FAQ</span></a>?<br>
+<br>
+<i>However if you wanted to publish a book of other people&#x2019;s MetaFilter comments you&#x2019;d need to speak with those individual users; MetaFilter is not the owner of the copyright of that content. </i><br><div class="commentName">&#x2014; FreezBoy</div><div class="spacer">&#x2738;</div></div><div class="comments">Would be appropriate for <a href="http://metatalk.metafilter.com/23432/Thirteen-years-later-this-counts-as-a-historical-document"><span class="linkfix">historical documents.</span></a><br><div class="commentName">&#x2014; Kabanos</div><div class="spacer">&#x2738;</div></div><div class="comments">You missed <a href="https://github.com/dariusk/NaNoGenMo-2014"><span class="linkfix">NaNoGenMo</span></a> by a week! This is awesome.<br><div class="commentName">&#x2014; jdherg</div><div class="spacer">&#x2738;</div></div><div class="comments">Wow, very neat! I agree with FreezBoy, but it still looks really neat.<br><div class="commentName">&#x2014; cashman</div><div class="spacer">&#x2738;</div></div><div class="comments">A selection of Metafilter comments, complete with updates from people over the years about their lives, would make an amazing book.<br><div class="commentName">&#x2014; Melismata</div><div class="spacer">&#x2738;</div></div><div class="comments">now to pick the goofiest post around to print and give as a gift.<br><div class="commentName">&#x2014; boo_radley</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>doesn&#x2019;t this run afoul of the copyright part of the FAQ?</i><br>
+<br>
+To be clear: I&#x2019;m not selling the books or making the ones I&#x2019;ve created available.  The script just creates a PDF, then if you desire to make a personal object out of it, it&#x2019;s up to you.<br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>However if you wanted to publish a book of other people&#x2019;s MetaFilter comments you&#x2019;d need to speak with those individual users; MetaFilter is not the owner of the copyright of that content.</i><br>
+<br>
+My feeling there is that we&#x2019;re talking about publish as in &#x201C;with intent to sell/distribute&#x201D;, not merely in the sense of &#x201C;cause to take physical form&#x201D;. It&#x2019;s okay to print a thread out on your printer at home; it&#x2019;s okay to print yourself a copy in fancy PDF-ified form from an on-demand press; it&#x2019;s not okay to start a bookstore called Unauthorized Mefi Threads Inc. where you sell bound copies of threads to third parties without explicit permission/license from the folks who commented therein.<br><div class="commentName">&#x2014; cortex</div><div class="spacer">&#x2738;</div></div><div class="comments">Or what cortex said.<br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>now to pick the goofiest post around to print and give as a gift.</i><br>
+<br>
+<a href="http://mefiwiki.com/wiki/Longest_Threads#Current_Record_Across_All_MetaFilter_Sites"><span class="linkfix">Alphabet thread.</span></a><br><div class="commentName">&#x2014; Kabanos</div><div class="spacer">&#x2738;</div></div><div class="comments"><a href="http://metatalk.metafilter.com/23524/mefi2book#1181287"><span class="linkfix">boo_radley</span></a>: <i>now to pick the goofiest post around to print and give as a gift.</i><br>
+<br>
+My two suggestions from this year: <a href="http://www.metafilter.com/145070/JokeFilter"><span class="linkfix">JokeFilter</span></a> and <a href="http://www.metafilter.com/143848/hassled-by-the-cops-for-taking-too-many-photographs-of-freight-trains"><span class="linkfix">The Most &#x201C;Dad&#x201D; Things Ever</span></a><br><div class="commentName">&#x2014; filthy light thief</div><div class="spacer">&#x2738;</div></div><div class="comments">Was instantly reminded of <a href="http://www.metafilter.com/82806/Confidential-to-NY-Times-Free-as-in-speech"><span class="linkfix">this FPP</span></a> about the ethics of printing stuff off of Flickr.<br>
+<br>
+Wow&#x2026; What does it say about me that a five year old FPP and ensuing conversation is that close at hand, mentally speaking?<br><div class="commentName">&#x2014; ODiV</div><div class="spacer">&#x2738;</div></div><div class="comments"><a href="https://metatalk.metafilter.com/23524/mefi2book#1181293"><span class="linkfix">Kabanos</span></a>: &#x201C;<i><a href="http://mefiwiki.com/wiki/Longest_Threads#Current_Record_Across_All_MetaFilter_Sites"><span class="linkfix">Alphabet thread.</span></a></i>&#x201D;<br>
+<br>
+&#x201C;I promise you can play alphabet, every answer is a question or recipe game in here if you promise not to actually need the mods for anything.&#x201D; <br>
+posted by jessamyn (staff) at 4:54 PM on May 15, 2013 <br>
+<br>
+This is the most mom post <em>ever</em>.<br><div class="commentName">&#x2014; boo_radley</div><div class="spacer">&#x2738;</div></div><div class="comments">oh my god, it uses tags for publication topics :3:<br><div class="commentName">&#x2014; boo_radley</div><div class="spacer">&#x2738;</div></div><div class="comments">Wonderful. I assume everyone else also immediately turned to the index to look for their name. Everyone? Hello?<br>
+<br>
+How much did it cost to print them?<br><div class="commentName">&#x2014; benito.strauss</div><div class="spacer">&#x2738;</div></div><div class="comments">I have two complaints:<br>
+<br>
+1. You didn&#x2019;t ask me permission to print my comments.<br>
+2. You didn&#x2019;t print any of my comments.<br><div class="commentName">&#x2014; ODiV</div><div class="spacer">&#x2738;</div></div><div class="comments">Am I the only one here that immediately went off to see if unauthorizedmefithreads.com was taken?<br><div class="commentName">&#x2014; el io</div><div class="spacer">&#x2738;</div></div><div class="comments">My layout question/comment is that the PDfs are showing a lot of unfortunate page breaks where the user name is on the next page. Is there a way to address that?<br><div class="commentName">&#x2014; GenjiandProust</div><div class="spacer">&#x2738;</div></div><div class="comments">That is way cool. It&#x2019;s a little disconcerting that they look so nice.<br><div class="commentName">&#x2014; LobsterMitten</div><div class="spacer">&#x2738;</div></div><div class="comments">Just found out the hyperlinks are clickable in the PDF&#x2026; nice&#x2026;<br><div class="commentName">&#x2014; one4themoment</div><div class="spacer">&#x2738;</div></div><div class="comments">I am thinking of printing out some of the more contentious MeTas, so I can seal the booklets in lead boxes with mystical wards and let them stew for seven years. After that time, I can judiciously add them to curses to provide extra potency. Not that this plan would turn on me and destroy everything I hold dear&#x2026;.<br><div class="commentName">&#x2014; GenjiandProust</div><div class="spacer">&#x2738;</div></div><div class="comments">Would someone be willing to make a .pdf of the thread that won BESTEST POSTEST EVER DECEMBER 2014 (or another category) and offer it as a prize for the December best post contest?<br>
+<br>
+If someone&#x2019;s willing to do that part, I&#x2019;d be willing to put up $ to have it printed for the winner. <br>
+<br>
+Not trying to put anyone on the spot (especially you, gwint), particularly as I have no idea how much effort it would take - just sliding it out there as an idea.<br><div class="commentName">&#x2014; barchan</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>How much did it cost to print them?</i><br>
+<br>
+About $15-20 a pop, plus shipping.  <a href="http://www.retailmenot.com/view/lulu.com"><span class="linkfix">Lulu usually has active coupon codes available</span></a> as well.<br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>My layout question/comment is that the PDfs are showing a lot of unfortunate page breaks where the user name is on the next page. Is there a way to address that?</i><br>
+<br>
+Yeah, that&#x2019;s a tough one. With automation, it would be a trade off between comments/usernames getting cut off and weird extra space at the bottom of pages. I asked a friend who does book design for a living about it and he said &#x201C;That&#x2019;s why I get paid to do book design for a living.&#x201D;<br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments">This is great.<br><div class="commentName">&#x2014; Going To Maine</div><div class="spacer">&#x2738;</div></div><div class="comments">Widows and orphans.<br>
+<br>
+Just create a rule for them.<br><div class="commentName">&#x2014; cjorgensen</div><div class="spacer">&#x2738;</div></div><div class="comments">Like &#x201C;send &#x2018;em to the dogs&#x201D; or &#x201C;let the church take care of them&#x201D;? You know, winter is coming, and we have so many mouths to feed as it is &#x2026;<br>
+<br>
+OH! You meant regarding formatting. Right. Heh, I sound like a right curmudgeon, don&#x2019;t I. Hrm. Well.<br><div class="commentName">&#x2014; filthy light thief</div><div class="spacer">&#x2738;</div></div><div class="comments">Is there a way that pre-2006 inline images can appear as engravings?<br><div class="commentName">&#x2014; Kabanos</div><div class="spacer">&#x2738;</div></div><div class="comments">How do I actually use this script?  I have Chrome, Firefox, Opera, etc, at my disposal.  I have Greasemonkey installed.  Is this something I can install and then click a &#x201C;button&#x201D; or a hyperlink to run? or is this a something else?  I am obviously not a programmer or much more than a daring user willing to follow directions, even multi-step ones.<br>
+<br>
+Or is it self explanatory and I missed something?<br><div class="commentName">&#x2014; 724A</div><div class="spacer">&#x2738;</div></div><div class="comments"><em>it&#x2019;s okay to print yourself a copy in fancy PDF-ified form from an on-demand press</em><br>
+<br>
+Serious question: What about giving them as gifts? I can think of some super-useful posts on the green that would make great gifts for specific people. But it doesn&#x2019;t feel right, at a gut level.<br><div class="commentName">&#x2014; jbickers</div><div class="spacer">&#x2738;</div></div><div class="comments">Okay, I&#x2019;ll bite. What&#x2019;s wrong with post 9622?<br><div class="commentName">&#x2014; benito.strauss</div><div class="spacer">&#x2738;</div></div><div class="comments"><a href="http://metatalk.metafilter.com/23524/mefi2book#1181322"><span class="linkfix">filthy light thief</span></a>: &#x201C;<i>Like &#x201C;send &#x2018;em to the dogs&#x201D; or &#x201C;let the church take care of them&#x201D;?</i>&#x201D;<br>
+<br>
+You dropped what was the PERFECT chance to quote A Christmas Carol.<br><div class="commentName">&#x2014; Chrysostom</div><div class="spacer">&#x2738;</div></div><div class="comments">Wow, this is so awesome.<br><div class="commentName">&#x2014; So You&#x2019;re Saying These Are Pants?</div><div class="spacer">&#x2738;</div></div><div class="comments"><a href="http://metatalk.metafilter.com/23524/mefi2book#1181342"><span class="linkfix">Chrysostom</span></a>: <i>You dropped what was the PERFECT chance to quote A Christmas Carol.</i><br>
+<br>
+I would normally take offense at such tasteless banter and laughter at my expense. However, in view of the general gaiety of the occasion, I am inclined to overlook it. The <a href="http://charlesdickenspage.com/glossary.html#T"><span class="linkfix">Treadmill</span></a> and the <a href="http://en.wikipedia.org/wiki/English_Poor_Laws"><span class="linkfix">Poor Law</span></a> are in full vigor, then?<br><div class="commentName">&#x2014; filthy light thief</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>Serious question: What about giving them as gifts?</i><br>
+<br>
+Do you have a reasonable expectation that the recipient of that gift would turn around and try to capitalize on it as a resale opportunity or otherwise misuse the gift in a way that violates the spirit of the copyright notice?  If so, do not give it as a gift.  Otherwise, it seems like a non-issue, at least in terms of the copyright/publishing ethics.  Whatever other concerns are tied up in such an idea are their own discussion, I figure.<br><div class="commentName">&#x2014; cortex</div><div class="spacer">&#x2738;</div></div><div class="comments">This is a neat thing you made.<br><div class="commentName">&#x2014; odinsdream</div><div class="spacer">&#x2738;</div></div><div class="comments"><i>Widows and orphans.<br>
+<br>
+Just create a rule for them.</i><br>
+<br>
+Well, it&#x2019;s not like there&#x2019;s just a simple css rule I can apply&#x2026; <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/widows"><span class="linkfix">wait</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/orphans"><span class="linkfix">what</span></a>? O_o<br>
+<br>
+I&#x2019;ll see if I can incorporate those as an optional switch.  &lt;geek&gt;The script relies on the <a href="http://wkhtmltopdf.org/"><span class="linkfix">wkhtmltopdf</span></a> library, which uses WebKit for the heavy lifting html-&gt;pdf conversion, so if that lib supports those css rules, it should be possible.&lt;/geek&gt;<br>
+<br>
+<br>
+<i>How do I actually use this script?</i><br>
+<br>
+Well, unfortunately for now, it can only be used on the command line (i.e. Terminal) and requires you install some additional software, so if you&#x2019;re not comfortable with a little bit of unix, it might be tricky. I might set it up as a webservice if there&#x2019;s really a demand for it, but probably not.<br>
+<br>
+<br>
+<i>offer it as a prize for the December best post contest</i><br>
+<br>
+I&#x2019;d be happy to do this, but realize that most threads are not actually long enough for a hardcover book.  Several hundred comments are needed at least generally.  The Wiki has a <a href="http://mefiwiki.com/wiki/Longest_Threads"><span class="linkfix">list of longest threads</span></a>, if you&#x2019;re interested.<br><div class="commentName">&#x2014; gwint</div><div class="spacer">&#x2738;</div></div><div class="comments"><em>Alphabet thread.</em><br>
+<br>
+Oh, grief. Every time I see that, end up with flashbacks to the night of a bottle of gin, keyboard thumping and muttering &#x201C;Just for once, in this life packed with disappointments and near-misses, I <strong>WILL</strong> have the last word, Goddamit&#x201D;.<br>
+<br>
+Haven&#x2019;t drunk gin since.<br><div class="commentName">&#x2014; Wordshore</div><div class="spacer">&#x2738;</div></div><div class="comments">Excellent! This completely eliminates the need for my manservant, who prints a weekly digest of prominent Metafilter threads for me to peruse during those times the ComSat is down on my GS-V. This will save me well over $100,000 per annum, not including all the benefits, bonuses and <em>per diems</em> that my manservant requires. Splendid!<br><div class="commentName">&#x2014; slogger</div><div class="spacer">&#x2738;</div></div><div class="comments">Want to totally geek out make one that exports to flowable ePub.<br><div class="commentName">&#x2014; cjorgensen</div><div class="spacer">&#x2738;</div></div><div class="comments">Whoa gwint, that is so cool! Enjoyed your video too.<br>
+<br>
+I am contemplating hiding the mefi books at my local library! Those books will still be there long after the internet has ceased to exist. :-)<br><div class="commentName">&#x2014; travelwithcats</div><div class="spacer">&#x2738;</div></div><div class="comments"><em>I&#x2019;d be happy to do this, but realize that most threads are not actually long enough for a hardcover book.</em><br>
+<br>
+hmmm oh I didn&#x2019;t think of that, good point. But wouldn&#x2019;t a <em>truly</em> excellent  post spur a healthy thread long enough? *grin* So probably not. Thank you for offering, though.<br>
+<br>
+(Although - not to take advantage of your offer - do I read you right in that we could offer a winner their choice of one of those longer threads? I&#x2019;d be up for that if you&#x2019;re willing. This is just so cool.)<br><div class="commentName">&#x2014; barchan</div><div class="spacer">&#x2738;</div></div><div class="comments"><em>Is there a way that pre-2006 inline images can appear as engravings?</em><br>
+<br>
+They tried. The first engraver ran out into a storm and was never seen again. The second crushed themselves to death in a press. The third was institutionalized, where they rock and mutter something about elephants and chickens to this day.<br><div class="commentName">&#x2014; GenjiandProust</div><div class="spacer">&#x2738;</div></div><div class="comments">I would <em>love</em> for the output of this to be epub rather than pdf.<br><div class="commentName">&#x2014; Ivan Fyodorovich</div><div class="spacer">&#x2738;</div></div><div class="comments">I have absolutely no use for this, but I love it!<br><div class="commentName">&#x2014; anotherpanacea</div><div class="spacer">&#x2738;</div></div><div class="comments">I&#x2019;ve solved the whole copyright &#x201C;problem&#x201D; by simply creating extra MetaFilter accounts and endlessly arguing with myself in MetaTalk threads.  Then I print that thread up as a book, and as I own the copyright to all the comments anyway there&#x2019;s no legal issue.  <i>Wait, that doesn&#x2019;t make sense.</i>  Yes it does, you idiot - if you had any brains at all you&#x2019;d realise that.  <i>No you stupid fool, and also you have to log into the OTHER ACCOUNTS to have an argument.</i>  Yeah, dickhead - you can&#x2019;t just argue with yourself.  <i>Oh yeah?  Who fucking died and made you guys President and Vice-President of my life? Fuck off, the both of you.</i>  Sorry to interject everyone, but you can&#x2019;t use language like &#x201C;fuck off&#x201D; about another user here.  <i>Umm, hello? I&#x2019;m using it about MYSELF? </i>Oh please if this shitty troll isn&#x2019;t banned immediately I&#x2019;ll close my account in protest.<i>  Fuck that - I&#x2019;m closing my account now.  Have fun with your mindless circle jerk, everyone.</i> Yeah, actually - I&#x2019;m closing my account too.  I hope you all feel proud of yourself. <i>Well THAT went well.  I guess that&#x2019;s why I can&#x2019;t have nice things</i>.  Wait, can&#x2019;t I? Shit.<br><div class="commentName">&#x2014; the quidnunc kid</div><div class="spacer">&#x2738;</div></div><div class="comments">MY PUBLISHED WORKS CAN NOW NUMBER INTO THE THOUSANDS.<br><div class="commentName">&#x2014; The Whelk</div><div class="spacer">&#x2738;</div></div><div class="comments">I love this but when I tried running it on OSX 10.10.1, I got the following error:<br>
+<br>
+<code>steven@WorkMac ~/temp/mefi2book (master %=)$ node mefi2book.js -p 23524 -s metatalk<br>
+<br>
+events.js:72<br>
+        throw er; // Unhandled &apos;error&apos; event<br>
+              ^<br>
+Error: spawn ENOENT<br>
+    at errnoException (child_process.js:1001:11)<br>
+    at Process.ChildProcess._handle.onexit (child_process.js:792:34)<br>
+</code><br>
+<br>
+I installed node.js, set my NODE_PATH, installed wkhtmltopdf, xpdf and npm. I ran <code>npm update</code> I don&#x2019;t know a lot about node.js. Am I missing a dependency?<br><div class="commentName">&#x2014; double block and bleed</div><div class="spacer">&#x2738;</div></div><div class="comments">Wait, which quidnunc kid is #1, now&#x2026;?<br><div class="commentName">&#x2014; GenjiandProust</div></div><div class="comments"></div><div class="comments">
+		
+		<!-- MeFi redesign responsive -->
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8621957794194569" data-ad-slot="2376191428" data-ad-format="auto"></ins>
+		
+		</div></div>
+
+	<div class="contributorIndex">
+		<div class="contributorIndexTitle"><div class="sectionHead"><span class="circle">&#x25E6;</span> &#xA0; C O N T R I B U T O R &#xA0; I N D E X &#xA0; <span class="circle">&#x25E6;</span></div></div>
+	</div>
+
+</body>
+</html>

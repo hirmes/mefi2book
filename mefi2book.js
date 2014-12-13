@@ -40,6 +40,7 @@ var MEFI2BOOK = function() {
 	var	VERSION_NUMBER = "1.0.0",
 
 		CACHE_DIR = "mefi2book_cached_files_here/",
+		DOMAIN = "metafilter.com",
 
 		pdfOptions = { 
 			pageHeight: '9in',
@@ -144,7 +145,7 @@ var MEFI2BOOK = function() {
 				// if file doesn't exist in cached folder, grab from web
 				if ( error.code == "ENOENT" ) {
 					logger("Reading post from WEB");
-					request('http://'+mefiSubSite+'.metafilter.com/'+mefiThreadNumber, {
+					request('http://'+mefiSubSite+'.'+DOMAIN+'/'+mefiThreadNumber, {
 						encoding: 'utf8'
 					}, function(error, response, body) {
 						if (!error && response.statusCode == 200) {
@@ -257,7 +258,7 @@ var MEFI2BOOK = function() {
 		tagsString = tagsString + "</span>";
 		outCover(".topicsList").html(tagsString);
 
-		outCover(".fullThreadURL").text(mefiSubSite + ".metafilter.com/"+mefiThreadNumber);
+		outCover(".fullThreadURL").text(mefiSubSite + "."+DOMAIN+"/"+mefiThreadNumber);
 
 		// write temp cover page html file
 		fs.writeFile(bookCover, outCover.html());
