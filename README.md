@@ -2,6 +2,12 @@
 
 This [node.js](http://nodejs.org/) script converts a post from [Metafilter](http://www.metafilter.com) into a PDF suitable for printing in book form.
 
+* [Relevant Metatalk thread](http://metatalk.metafilter.com/23524/mefi2book)
+* [Sample PDF output](http://hirmes.com/mefi2book/www_metafilter_128901.pdf)
+* [Photo samples of printed books](https://www.flickr.com/photos/hirmes/sets/72157649658026692/)
+* [Video of book samples](https://www.youtube.com/watch?v=Lw1ZMLU04jM)
+
+
 ### Dependencies
 
 Once downloaded, run `npm update` to get the necessary node modules.
@@ -16,6 +22,7 @@ Usage: node mefi2book.js [options]
 Options:
    -p, --postnumber   The numberic ID of the post, found in its URL. REQUIRED
    -s, --subsite      The subsite. Valid options are www, ask, or metatalk.  Default is  [www]
+   -n, --nocache      Ignore cached files  [false]
    --verbose          Output some messages as the script progresses  [false]
    -v, --version      Print version and exit
 ```

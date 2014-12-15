@@ -80,6 +80,12 @@ var MEFI2BOOK = function() {
 					 choices: ['www','ask','metatalk'],
 					 help: 'The subsite. Valid options are www, ask, or metatalk.  Default is'
 				  })
+			   .option('nocache', {
+			   		abbr: 'n',
+			   		flag: true,
+			   		default: false,
+			   		help: 'Ignore cached files'
+			   	})
 			   .option('verbose', {
 					flag: true,
 					default: false,
@@ -127,7 +133,9 @@ var MEFI2BOOK = function() {
 		template = fs.readFileSync('template_main.html').toString(),
 		out = cheerio.load(template),
 		coverTemplate = fs.readFileSync('template_cover.html').toString(),
-		outCover = cheerio.load(coverTemplate);
+		outCover = cheerio.load(coverTemplate),
+
+		cachedThread = CACHE_DIR+mefiSubSite+'_metafilter_'+mefiThreadNumber+'_original.html';
 
 
 	/**
@@ -137,39 +145,54 @@ var MEFI2BOOK = function() {
 	 * @memberof mefi2book
 	 */
 	function start() {
-		// see if we've got a cached copy first
-		var cachedThread = CACHE_DIR+mefiSubSite+'_metafilter_'+mefiThreadNumber+'_original.html';
 
-		fs.readFile(cachedThread, function(error, data) {
-			if (error) {
-				// if file doesn't exist in cached folder, grab from web
-				if ( error.code == "ENOENT" ) {
-					logger("Reading post from WEB");
-					request('http://'+mefiSubSite+'.'+DOMAIN+'/'+mefiThreadNumber, {
-						encoding: 'utf8'
-					}, function(error, response, body) {
-						if (!error && response.statusCode == 200) {
-							fs.writeFile(cachedThread, body, function(err) {
-								if (err) {
-									done("ERROR: Could not save post locally: " + err);
-								} else {
-									logger("Post file was saved");
-									parseMefiThread(body);
-								}
-							});
-						} else {
-							done("Error fetching post.  Maybe it doesn't exist? Here's the full error: " + error);
-						}
-					});
+		if ( options.nocache ) {
+			scrapeThreadFromWeb();
+		} else {
+			fs.readFile(cachedThread, function(error, data) {
+				if (error) {
+					// if file doesn't exist in cached folder, grab from web
+					if ( error.code == "ENOENT" ) {
+						scrapeThreadFromWeb();
+					} else {
+						done("Error reading mefiThread from disk: " + error);
+					}
 				} else {
-					done("Error reading mefiThread from disk: " + error);
+					logger("Reading post from CACHE");
+					parseMefiThread(data.toString("utf8"));
 				}
+			});
+		}
+		
+	}
+
+
+	/**
+	 * scrapeThreadFromWeb
+	 *
+	 * reads thread from web and saves in cache folder
+	 *
+	 */
+	function scrapeThreadFromWeb() {
+		logger("Reading post from WEB");
+		request('http://'+mefiSubSite+'.'+DOMAIN+'/'+mefiThreadNumber, {
+			encoding: 'utf8'
+		}, function(error, response, body) {
+			if (!error && response.statusCode == 200) {
+				fs.writeFile(cachedThread, body, function(err) {
+					if (err) {
+						done("ERROR: Could not save post locally: " + err);
+					} else {
+						logger("Post file was saved");
+						parseMefiThread(body);
+					}
+				});
 			} else {
-				logger("Reading post from CACHE");
-				parseMefiThread(data.toString("utf8"));
+				done("Error fetching post.  Maybe it doesn't exist? Here's the full error: " + error);
 			}
 		});
 	}
+
 
 	/**
 	 * parseMefiThread
