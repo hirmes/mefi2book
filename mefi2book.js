@@ -39,7 +39,7 @@ var MEFI2BOOK = function() {
 
 	var	VERSION_NUMBER = "1.0.0",
 
-		CACHE_DIR = "mefi2book_cached_files_here/",
+		CACHE_DIR = "mefi2book_cached_files/",
 		DOMAIN = "metafilter.com",
 
 		pdfOptions = { 
